@@ -1,0 +1,14 @@
+<html>
+	<header>
+	</header>
+	<body>
+		<script>
+			var queryString = window.location.search;
+			console.log(queryString);
+			queryString = queryString.replace('?','');
+			console.log(queryString);
+			window.location.href = 'elodms://' + queryString;
+		</script>
+	</body>
+
+</html>
