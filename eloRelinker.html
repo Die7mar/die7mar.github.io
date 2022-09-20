@@ -1,17 +1,24 @@
 <html>
 <header>
-	<title>ELO Relinker</title>
+    <title>ELO Relinker</title>
 </header>
 
 <body>
-	<script>
-		var queryString = window.location.search;
-		console.log(queryString);
-		queryString = queryString.replace('?', '');
-		console.log(queryString);
-		window.location.href = 'elodms://' + queryString;
-		window.close();
-	</script>
+    <a id="mainLink">Hier klicken um zum Dokument zu navigieren</a>
+    <script>
+        var queryString = window.location.search;
+        console.log(queryString);
+        queryString = queryString.replace('?', '');
+        console.log(queryString);
+        var link = 'elodms://' + queryString;
+        console.log(link);
+        window.location.href = link;
+
+
+        var linkElement = document.getElementById("mainLink");
+        linkElement.setAttribute("href", link);
+
+    </script>
 </body>
 
 </html>
